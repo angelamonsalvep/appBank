@@ -1,11 +1,12 @@
 package com.projects.springboot.appBank.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
 
 @Document("users")
 public class User {
 	
-	@org.springframework.data.annotation.Id
+	@Id
 	private String Id;
 	
 	private String names;
