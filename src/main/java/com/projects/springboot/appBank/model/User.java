@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 public class User {
 	
 	@Id
-	private String Id;
+	private String id;
 	
 	private String names;
 	private String email;
@@ -21,7 +21,7 @@ public class User {
 
 	public User(String id, String names, String email, String pass, String numberAccount, long balance) {
 		super();
-		Id = id;
+		this.id = id;
 		this.names = names;
 		this.email = email;
 		this.pass = pass;
@@ -29,12 +29,13 @@ public class User {
 		this.balance = balance;
 	}
 
+
 	public String getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(String id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getNames() {
