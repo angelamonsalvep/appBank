@@ -1,6 +1,7 @@
 package com.projects.springboot.appBank.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.annotation.Id;
 
 @Document("users")
@@ -9,18 +10,25 @@ public class User {
 	@Id
 	private String id;
 	
+	@Field
 	private String names;
+	
+	@Field
 	private String email;
+	
+	@Field
 	private String pass;
+	
+	@Field
 	private String numberAccount;
+	
+	@Field
 	private long balance;
 	
 	public User() {
-		super();
 	}
 
 	public User(String id, String names, String email, String pass, String numberAccount, long balance) {
-		super();
 		this.id = id;
 		this.names = names;
 		this.email = email;
@@ -76,6 +84,12 @@ public class User {
 
 	public void setBalance(long balance) {
 		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", names=" + names + ", email=" + email + ", pass=" + pass + ", numberAccount="
+				+ numberAccount + ", balance=" + balance + "]";
 	}
 	
 	
